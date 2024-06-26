@@ -10,7 +10,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.environ.get("DEBUG", default=False).lower()
 SECRET_KEY = os.environ.get("SECRET_KEY","django-insecure-default-key")
 
-ALLOWED_HOSTS = ['10.0.2.2', '127.0.0.1']
+# ALLOWED_HOSTS = ['10.0.2.2', '127.0.0.1']
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
 CSRF_COOKIE_SECURE = False
 
 # Application definition
